@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Assessment Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="result-container">
+
+    <div style="text-align: center;">
+        <span class="header-badge">Assessment Complete</span>
+        <h1>Cardiovascular Prediction</h1>
+    </div>
+
+    {% if "High" in prediction %}
+
+        <div class="result-card danger">
+            <h2>{{ prediction }}</h2>
+            <p>
+                Based on the submitted clinical indicators, the model identifies standard patterns consistent with elevated cardiovascular risk. Further clinical evaluation is recommended.
+            </p>
+        </div>
+
+    {% else %}
+
+        <div class="result-card success">
+            <h2>{{ prediction }}</h2>
+            <p>
+                Based on the submitted clinical indicators, the model indicates low probability of cardiovascular risk. Maintain regular health monitoring.
+            </p>
+        </div>
+
+    {% endif %}
+
+    <a href="/" style="text-decoration: none;">
+        <button class="back-btn">
+            ← Perform New Assessment
+        </button>
+    </a>
+
+</div>
+
+</body>
+</html>
