@@ -17,7 +17,7 @@ An end-to-end Machine Learning web application designed to assess heart disease 
 ## 🚀 Live Web Application
 
 🔗 **Render Live Deployment URL:**  
-`https://heart-disease-prediction-mrer.onrender.com/`
+`https://heart-disease-prediction-main-muux.onrender.com`
 
 ---
 
